@@ -1,5 +1,5 @@
-function posizione(a, x){
-  var i = a.indexOf(x);
+function posizione(a, s){
+  var i = a.indexOf(s);
   return i+1;
 }
 

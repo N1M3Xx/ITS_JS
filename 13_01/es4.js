@@ -1,5 +1,5 @@
-function rimuovi(a, x){
-  var i = a.indexOf(x);
+function rimuovi(a, i){
+  var i = a.indexOf(i);
   if (i > -1)
     a.splice(i, 1);
   return a;

@@ -1,7 +1,6 @@
-function conv(string){
-  var x="", ct2=0;
-  var a = string.split(",");
+function conv(s){
+  var a = s.split(",");
   return a;
 }
 
-console.log(conv("mi, piace, la, patata"));
+console.log(conv("mela, pera, salsa, riso"));

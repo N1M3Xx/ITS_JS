@@ -1,7 +1,7 @@
-function v_f(bool){
-  if((bool=="y") || (bool=="yes"))
+function v_f(b){
+  if((b=="y") || (b=="yes"))
     console.log("True");
-  else if((bool=="n") || (bool=="no"))
+  else if((b=="n") || (b=="no"))
     console.log("False");
 }
 
