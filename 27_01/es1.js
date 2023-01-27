@@ -10,14 +10,14 @@ const server = http.createServer((req, res) => {
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
-   var uriReq = url.parse(req.url);
+  var uriReq = url.parse(req.url);
   var email = q.parse(uriReq.query);
   var isValidEmail = valida(email.email)
   var risposta = {
     "email": isValidEmail
   }
 
-  console.log(risposta);
+  console.log(q);
   res.end(JSON.stringify(risposta))
   
 });
