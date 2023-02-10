@@ -6,32 +6,36 @@ const PORT = process.env.PORT || 3000;
 
 var url = require('url');
 
+var a = []
+
 const server = http.createServer((req, res) => {
 
-  var a = []
   var s = true
+  var data =''
 
-  req.on('data', (data) => {
+  req.on('data', (datoPost) => {
+    data+=datoPost
+  })
+  
+  req.on('end', () => {
+    data = q.parse(data)
     if(req.url == "/add")
     {
       for(x = 0; x < a.length; x++){
-        if(a[x] == data)
+        if(a[x] == data.int)
           s = false
       }
       if(s == true)
-        a.push(data)
+        a.push(data.int)
     }
     else if(req.url == "/remove")
     {
       for(x = 0; x < a.length; x++){
-        if(a[x] == data){
+        if(a[x] == data.int){
           a.splice(x, 1)
         }
       }
     }
-  })
-  
-  req.on('end', () => {
     console.log(a)
   })
 
